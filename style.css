@@ -1,28 +1,137 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background: #000;
     color: white;
-    margin: 0;
+    overflow: hidden;
 }
+
+/* Background */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center/cover;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+
+/* Main Container */
 .container {
     text-align: center;
+    position: relative;
 }
-button {
-    background-color: #fff;
-    color: #0072ff;
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Waitlist Card */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Buttons */
+.top-btn {
     border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background: white;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
-button:hover {
-    background-color: #00c6ff;
-    color: #fff;
+
+.top-btn:hover {
+    background: gray;
+    color: white;
+}
+
+.wallet-btn {
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.wallet-btn:hover {
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.icon:hover {
+    background: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9rem;
+    color: #555;
 }
