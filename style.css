@@ -1,137 +1,123 @@
-/* Basic Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
     color: white;
-    overflow: hidden;
-}
-
-/* Background */
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('background.jpg') no-repeat center center/cover;
-    filter: brightness(0.6);
-    z-index: -1;
+    text-align: center;
 }
 
 /* Main Container */
 .container {
-    text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Waitlist Card */
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px;
-    width: 400px;
-    margin: auto;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-}
-
-.card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.card p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #ddd;
-}
-
-/* Buttons */
-.top-btn {
+/* Waitlist Button */
+.waitlist-btn {
     border: none;
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50px;
     padding: 8px 16px;
-    font-size: 1rem;
-    background: white;
-    color: black;
-    font-weight: bold;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 14px;
+    margin-bottom: 20px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
-.top-btn:hover {
-    background: gray;
-    color: white;
+.waitlist-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
-.wallet-btn {
+/* Title */
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Description */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Input Box */
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    padding: 10px;
     border: none;
-    border-radius: 20px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: white;
-    color: black;
-    cursor: pointer;
-    transition: all 0.3s;
+    border-radius: 25px;
+    width: 250px;
+    font-size: 16px;
 }
 
-.wallet-btn:hover {
-    background: black;
+.input-box button {
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-box button:hover {
+    background-color: gray;
     color: white;
-    border: 1px solid white;
 }
 
 /* Social Icons */
 .social-icons {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
     gap: 10px;
+    margin-bottom: 40px;
 }
 
 .icon {
+    border: 1px solid white;
     width: 30px;
     height: 30px;
-    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 0.9rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .icon:hover {
-    background: white;
+    background-color: white;
     color: black;
 }
 
 /* Footer */
 footer {
-    position: absolute;
-    bottom: 20px;
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 14px;
+    color: gray;
 }
